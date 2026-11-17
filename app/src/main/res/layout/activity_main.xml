@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D11"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <!-- Encabezado Académico -->
+    <TextView
+        android:id="@+id/tvHeaderAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2627_iax_prg_mdm"
+        android:textColor="#75757A"
+        android:textSize="13sp"
+        android:letterSpacing="0.12"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMainTituloUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="UT7: Persistencia de Datos"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderAsignatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor scrolleable para los botones -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMainTituloUT"
+        app:layout_constraintBottom_toTopOf="@id/tvFooter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📂 SECCIONES DE PERSISTENCIA"
+                android:textColor="#9E9E9E"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Botones de navegación de la UT7 -->
+            <Button
+                android:id="@+id/btnIrPrefs"
+                android:layout_width="290dp"
+                android:layout_height="52dp"
+                android:text="1. Preferencias Compartidas"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#6C5CE7"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnIrFicheros"
+                android:layout_width="290dp"
+                android:layout_height="52dp"
+                android:text="2. Ficheros Internos"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#6C5CE7"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnIrSQLite"
+                android:layout_width="290dp"
+                android:layout_height="52dp"
+                android:text="3. Base de Datos SQLite"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#6C5CE7"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnIrExterno"
+                android:layout_width="290dp"
+                android:layout_height="52dp"
+                android:text="4. Almacenamiento Externo"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#6C5CE7"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer descriptivo -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repositorio de Pruebas Docentes • DAM 2º"
+        android:textColor="#3A3A42"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
